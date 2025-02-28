@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="myportfolio.css">
+    <script>
+        function updateGreeting() {
+            const heading = document.querySelector('.main-heading');
+            const currentHour = new Date().getHours();
+            let greeting;
+
+            if (currentHour < 12) {
+                greeting = "Good Morning";
+            } else if (currentHour < 18) {
+                greeting = "Good Afternoon";
+            } else {
+                greeting = "Good Evening";
+            }
+
+            heading.classList.add('fade-out');
+            setTimeout(() => {
+                heading.textContent = `Hi! ${greeting} I'm Jilmark and Welcome to my Website Portfolio`;
+                heading.classList.remove('fade-out');
+                heading.classList.add('fade-in');
+            }, 500); 
+        }
+
+        window.onload = updateGreeting;
+    </script>
+
+</head>
+<body class="text-white">
+    <header class="flex justify-center space-x-8 py-4">
+        <a class="header-link" href="index.html">HOME</a>
+        <a class="header-link" href="aboutme.html">ABOUT ME</a>
+        <a class="header-link" href="Artworks.html">ARTWORKS</a>
+        <a class="header-link" href="socials.html">SOCIALS</a>
+    </header>
+    <main class="text">
+        <h1 class="main-heading">
+            
+        </h1>
+    </main>
+</body>
+</html>
